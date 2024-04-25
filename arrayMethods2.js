@@ -1,4 +1,7 @@
-// Create a function called adultFilter that takes in an array of people and returns the ones who are of age.
+// Create a function called nicknameMap that takes in an array of people and returns an array of nicknames.
+//  The nickname should be composed in this way: <name>-<age>.
+// example:
+// { name: 'Paul', age: 21 } => Paul-21
 
 let persons = [
   { name: 'Paul', age: 16 },
@@ -12,7 +15,6 @@ let persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-
-let adults = persons.filter((persons) => persons.age >=18);
+let nicknames = persons.map((persons) => persons.name + "-"+ persons.age);
 console.log(persons);
-console.log(adults);
+console.log(nicknames);
