@@ -1,7 +1,4 @@
-// Create a function called nicknameMap that takes in an array of people and returns an array of nicknames.
-//  The nickname should be composed in this way: <name>-<age>.
-// example:
-// { name: 'Paul', age: 21 } => Paul-21
+// Create a function called ageAverage that takes in an array of people and returns the average age.
 
 let persons = [
   { name: 'Paul', age: 16 },
@@ -15,6 +12,14 @@ let persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-let nicknames = persons.map((persons) => persons.name + "-"+ persons.age);
+function calculateAverageAge(persons) {
+  let suma = 0;
+  persons.forEach((el) => {
+    suma += el.age
+  });
+  let resultado= suma / persons.length
+  return resultado;
+}
+let average = calculateAverageAge(persons);
 console.log(persons);
-console.log(nicknames);
+console.log(average);
