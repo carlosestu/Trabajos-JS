@@ -10,9 +10,10 @@ let order = {
     },
   },
 };
-if (
-  order.customer.address &&
-  !order.customer.address.city
-) {
-  console.log("City is required");
+// if (
+//   // order.customer.address &&
+//   // !order.customer.address.city
+//   ) 
+if (!order.customer?.address?.city) {
+  console.log('City is required');
 }
