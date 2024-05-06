@@ -6,5 +6,5 @@ class Person {
         return firstName + lastName;
          }
 }
-let developer = new Person('Mario', 'Rossi');
+let developer = new Person('mario', 'Rossi');
 console.log(developer.firstName + " " + developer.lastName);
