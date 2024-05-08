@@ -22,7 +22,7 @@ class Person {
         return this.#lastName;
     }
     set age(newAge){
-        if (newAge <1) {
+        if (newAge<1) {
             this.#age = 1;
         } else if (newAge > 110) {
             this.#age = 110;
