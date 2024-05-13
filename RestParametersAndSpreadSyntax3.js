@@ -19,7 +19,7 @@ const person = {
     lastName: 'Rossi',
     age: 25
   };
-  const { id, ...restoPropiedades } = person;
-  const personInfo = [id, ...Object.entries(restoPropiedades).map(([key, value]) => key+":" +" " + value)];
+  const { id, ...rest } = person;
+  const personInfo = [id, ...Object.entries(rest).map(([key, value]) => key+":" +" " + value)];
   
   console.log(personInfo);
