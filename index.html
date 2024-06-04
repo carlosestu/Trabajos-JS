@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head> 
-    <script src="netRequest.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>netRequest</title>
-</head>
-<body>
+<html>
+    <head>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              function getFirstName() {
+                let name = document.getElementById("firstName");
+                let nameVal = name.value;
+                return nameVal;
+              }
+              let firstName = getFirstName(); 
+              console.log(firstName);
+            });
+          </script>
+    </head>
+  <body>
     <div id="container">
-
+      <form>
+        <div>
+          <label id="fName">First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
