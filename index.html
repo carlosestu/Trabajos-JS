@@ -1,22 +1,11 @@
+<!-- Get the value of the form-input text input field and print it in the console. -->
+
 <html>
-    <head>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              function getFirstName() {
-                let name = document.getElementById("firstName");
-                let nameVal = name.value;
-                return nameVal;
-              }
-              let firstName = getFirstName(); 
-              console.log(firstName);
-            });
-          </script>
-    </head>
   <body>
     <div id="container">
-      <form>
+      <form id="form">
         <div>
-          <label id="fName">First Name:</label>
+          <label>First Name:</label>
           <input type="text" class="form-input" id="firstName" value="Mario" />
         </div>
         <div>
@@ -31,3 +20,17 @@
     </div>
   </body>
 </html>
+
+<script>
+ function getform() {
+   let form = document.querySelector("#form");
+   let inputs = form.querySelectorAll("input");
+   let arr = [];
+  inputs.forEach((input) => arr.push(input.value));
+   return arr;
+ }
+
+ let formVals = getform();
+ console.log(formVals);
+
+</script>
