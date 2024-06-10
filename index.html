@@ -6,15 +6,15 @@
       <form id="form">
         <div>
           <label>First Name:</label>
-          <input type="text" class="form-input" id="firstName" value="Mario" />
+          <input type="text" class="form-input" name="firstName" id="firstName" value="Mario" />
         </div>
         <div>
           <label>Last Name:</label>
-          <input type="text" class="form-input" id="lastName" value="Rossi" />
+          <input type="text" class="form-input" name="lastName" id="lastName" value="Rossi" />
         </div>
         <div>
           <label>Age:</label>
-          <input type="number" class="form-input" id="age" value="25" />
+          <input type="number" class="form-input" name="age" id="age" value="25" />
         </div>
       </form>
     </div>
@@ -25,12 +25,15 @@
  function getform() {
    let form = document.querySelector("#form");
    let inputs = form.querySelectorAll("input");
-   let arr = [];
-  inputs.forEach((input) => arr.push(input.value));
-   return arr;
+   let obj = {}
+   inputs.forEach(key => {
+    obj[key.getAttribute('name')] = key.value;
+    console.log(`${key.getAttribute('name')}: ${key.value}`);
+   });
+   return obj;
+  // inputs.forEach((input) => console.log(Object.entries(input)));
  }
 
- let formVals = getform();
- console.log(formVals);
+getform();
 
 </script>
